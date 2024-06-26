@@ -1,0 +1,13 @@
+extends ./layout
+
+block content
+    div.container
+        h1= message
+        h2  h1 Pug - node template engine
+        p= feed["items"][0]["title"]
+        p= feed["link"]
+        div
+            each item in feed["items"]
+                div.item
+                    p= item["title"]
+                    b= item["author"]
